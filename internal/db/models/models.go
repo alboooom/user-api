@@ -10,6 +10,6 @@ type Users struct {
 	Users []User `json:"users"`
 }
 
-func (p *Users) appendUs(us *User) {
+func (p *Users) AppendUs(us *User) {
 	p.Users = append(p.Users, *us)
 }
