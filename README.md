@@ -10,13 +10,16 @@
 # get all users:
 -Request
 
- GET /users
+ GET /users 
+ 
  curl -H  http://localhost:1323/users
 
 -Response
 
 Content-Type: text/plain; charset=UTF-8
+
 Date: Wed, 10 Feb 2021 08:43:10 GMT
+
 Content-Length: 115
  
 # get user by id:
@@ -24,12 +27,15 @@ Content-Length: 115
 -Request
 
  GET /users/id 
+ 
  curl -H  http://localhost:1323/users/1
 
 -Response
 
 Content-Type: application/json; charset=UTF-8
+
 Date: Wed, 10 Feb 2021 08:43:04 GMT
+
 Content-Length: 42
 {
   "id": 1,
@@ -42,11 +48,16 @@ Content-Length: 42
 -Request
 
  PUT /users/5 HTTP/1.1
- Host: 127.0.0.1:1323
- User-Agent: insomnia/2020.5.2
- Content-Type: application/json
- Accept: */*
- Content-Length: 41
+
+Host: 127.0.0.1:1323
+
+User-Agent: insomnia/2020.5.2
+
+Content-Type: application/json
+
+Accept: */*
+
+Content-Length: 41
 
 | {
 | 	"email": "bbba@mail",
@@ -55,19 +66,26 @@ Content-Length: 42
 
 -Response
 
-< HTTP/1.1 200 OK
-< Date: Wed, 10 Feb 2021 08:41:09 GMT
-< Content-Length: 0
+HTTP/1.1 200 OK
+
+Date: Wed, 10 Feb 2021 08:41:09 GMT
+
+Content-Length: 0
   
 # create new user:
 
 -Request
 
  POST /users/new HTTP/1.1
+ 
  Host: 127.0.0.1:1323
+ 
  User-Agent: insomnia/2020.5.2
+ 
  Content-Type: application/json
+ 
  Accept: */*
+ 
  Content-Length: 53
 
 | {
@@ -77,9 +95,13 @@ Content-Length: 42
 | }
 
 -Response
+ 
  HTTP/1.1 200 OK
+ 
  Content-Type: application/json; charset=UTF-8
+ 
  Date: Wed, 10 Feb 2021 08:40:49 GMT
+ 
  Content-Length: 44
   
 # delete user by id:
@@ -87,12 +109,16 @@ Content-Length: 42
 -Request
 
 DELETE /users/id
+
 curl -H  http://localhost:1323/users/1
 
 -Response
 
- HTTP/1.1 200 OK
- Content-Type: application/json; charset=UTF-8
- Date: Wed, 10 Feb 2021 09:22:08 GMT
- Content-Length: 56
+HTTP/1.1 200 OK
+
+Content-Type: application/json; charset=UTF-8
+
+Date: Wed, 10 Feb 2021 09:22:08 GMT
+
+Content-Length: 56
 
